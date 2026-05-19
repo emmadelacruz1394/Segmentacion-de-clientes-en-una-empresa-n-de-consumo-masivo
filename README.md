@@ -1,170 +1,111 @@
-Caso Propuesto: Segmentación de Clientes en una Empresa de Consumo Masivo
-Nombre del Caso
+Caso propuesto: Segmentación de clientes en una empresa de consumo masivo
+Título del proyecto
 
-“MarketPlus: Inteligencia Comercial para Segmentación de Clientes”
+Diseño de un modelo de datos para la segmentación de clientes en una empresa de consumo masivo
 
-Contexto Empresarial
+Descripción del problema
 
-La empresa ficticia MarketPlus es una cadena de distribución y comercialización de productos de consumo masivo que abastece supermercados, bodegas y minimarkets en diferentes distritos de Lima.
+La empresa ficticia Distribuidora MaxConsumo S.A.C., dedicada a la comercialización y distribución de productos de consumo masivo (bebidas, productos de limpieza, snacks, lácteos y productos de higiene personal), cuenta con una amplia cartera de clientes conformada por bodegas, supermercados, minimarkets y consumidores finales.
 
-Durante los últimos años, la empresa ha incrementado considerablemente su volumen de ventas y la cantidad de clientes registrados. Sin embargo, el área comercial ha identificado varios problemas:
+Actualmente la empresa registra información de ventas y clientes en hojas de cálculo independientes, generando problemas como:
 
-No conocen claramente cuáles son sus clientes más rentables.
-No pueden diferenciar patrones de compra entre tipos de clientes.
-Las campañas de marketing se realizan de manera general y poco eficiente.
-Existe pérdida de clientes frecuentes sin identificar las causas.
-No tienen un modelo de datos estructurado que permita realizar análisis avanzados.
+Información duplicada de clientes.
+Dificultad para identificar clientes con mayor valor comercial.
+Escaso conocimiento sobre hábitos de compra.
+Problemas para crear promociones dirigidas.
+Dificultad para identificar clientes potenciales.
 
-Por ello, la gerencia decide implementar un proyecto de modelamiento de datos orientado a segmentación de clientes, con el objetivo de construir una base de datos que permita analizar el comportamiento de compra y clasificar a los clientes según sus hábitos de consumo.
+La gerencia comercial desea implementar un sistema basado en una base de datos estructurada que permita centralizar la información y segmentar clientes según sus características y comportamiento de compra.
 
-Objetivo del Proyecto
+Objetivo general
 
-Diseñar un modelo de base de datos que permita:
+Diseñar un modelo de base de datos para administrar y segmentar clientes de una empresa de consumo masivo, permitiendo mejorar el análisis comercial y la toma de decisiones.
 
-Registrar información de clientes.
-Registrar compras y detalle de productos adquiridos.
-Analizar frecuencia de compra.
-Identificar clientes de alto valor.
-Clasificar clientes por comportamiento de consumo.
-Facilitar futuras estrategias de marketing y fidelización.
-Descripción del Negocio
+Objetivos específicos
+Identificar las entidades involucradas en el proceso comercial.
+Diseñar un modelo entidad-relación para representar la información.
+Construir el modelo lógico y físico de la base de datos.
+Permitir clasificar clientes según criterios comerciales.
+Facilitar consultas para análisis y segmentación.
+Alcance del sistema
 
-MarketPlus vende productos de distintas categorías:
+El sistema permitirá:
 
-Bebidas
-Snacks
-Lácteos
-Limpieza
-Aseo personal
-Conservas
-Panificación
+Gestión de clientes
 
-Los clientes pueden comprar en tiendas físicas o mediante pedidos digitales.
+Registrar:
 
-La empresa desea almacenar información relacionada con:
-
-Clientes
-Datos personales
+Código del cliente
+Nombre
+Tipo de cliente
 Edad
 Género
+Dirección
 Distrito
-Nivel socioeconómico
-Canal de compra preferido
-Compras
-Fecha de compra
-Monto total
-Método de pago
-Tienda donde compró
-Productos
+Teléfono
+Correo
+Gestión de productos
+
+Registrar:
+
+Código del producto
+Nombre
 Categoría
 Marca
 Precio
-Proveedor
-Comportamiento de consumo
-Frecuencia de compra
-Ticket promedio
-Productos más comprados
-Horario habitual de compra
-Problema de Negocio
+Stock
+Gestión de ventas
 
-La empresa quiere responder preguntas como:
+Registrar:
 
-¿Qué clientes compran con mayor frecuencia?
-¿Qué segmento genera más ingresos?
-¿Qué productos consumen determinados grupos de clientes?
-¿Qué distritos tienen clientes de mayor valor?
-¿Qué clientes podrían abandonar la marca?
-¿Qué promociones deberían enviarse a cada segmento?
-Requerimientos del Sistema
-
-El sistema deberá permitir:
-
-Gestión de Clientes
-Registrar clientes nuevos
-Actualizar información
-Consultar historial de compras
-Gestión de Productos
-Registrar productos
-Asociar productos a categorías y proveedores
-Gestión de Ventas
-Registrar ventas
-Registrar detalle de productos vendidos
-Análisis
-Calcular frecuencia de compra
-Calcular ticket promedio
-Identificar clientes VIP
-Generar segmentos de clientes
-Alcance Académico del Proyecto
-
-Con este caso los estudiantes podrán practicar:
-
-Modelamiento Conceptual
-Entidades
-Atributos
-Relaciones
-Cardinalidades
-Modelamiento Lógico
-Llaves primarias
-Llaves foráneas
-Normalización
-Modelamiento Físico
-Creación de tablas
-Tipos de datos
-Restricciones
-Análisis de Datos
-Consultas SQL
-KPIs comerciales
-Segmentación básica
-Posibles Entidades del Modelo
-
-Algunas entidades que podrían surgir:
-
+Número de venta
+Fecha
 Cliente
-Venta
-Detalle_Venta
-Producto
-Categoría
-Proveedor
-Tienda
-Método_Pago
-Segmento_Cliente
-Canal_Venta
-Escenario Analítico
+Productos comprados
+Cantidad
+Monto total
+Segmentación de clientes
 
-La gerencia solicita construir segmentos como:
+Los clientes podrán clasificarse según:
 
-Segmento	Característica
-VIP	Alta frecuencia y alto gasto
-Frecuente	Compra seguido
-Ocasional	Compra pocas veces
-En Riesgo	Hace tiempo no compra
-Nuevo	Menos de 3 compras
-Entregables Esperados del Curso
+Segmentación demográfica
 
-Los alumnos deberán desarrollar:
+Edad
+Género
+Ubicación
 
-Caso de negocio
+Segmentación comercial
+
+Frecuencia de compra
+Monto gastado
+Categoría de productos comprados
+
+Segmentación por valor
+
+Cliente Premium
+Cliente Frecuente
+Cliente Ocasional
+Cliente Potencial
 Reglas de negocio
-Modelo entidad-relación
-Modelo relacional
-Diccionario de datos
-Normalización
-Scripts SQL
-Inserción de datos
-Consultas analíticas
-Dashboard o reporte final
-Ejemplo de Regla de Negocio
-Un cliente puede realizar muchas compras.
+Un cliente puede realizar varias compras.
 Una compra pertenece a un solo cliente.
-Una venta debe tener al menos un producto.
-Un producto pertenece a una sola categoría.
-Un proveedor puede abastecer varios productos.
-Resultado Esperado
-
-Al finalizar el proyecto, la empresa podrá contar con una base de datos estructurada que facilite:
-
-Estrategias de marketing personalizadas.
-Fidelización de clientes.
-Incremento de ventas.
-Análisis de comportamiento de consumo.
-Toma de decisiones basada en datos.
+Una venta puede contener varios productos.
+Un producto puede estar presente en varias ventas.
+Cada producto pertenece a una sola categoría.
+Cada cliente tendrá un único código identificador.
+Un cliente puede pertenecer a una categoría de segmentación.
+Una categoría de segmentación puede agrupar varios clientes.
+Beneficios esperados
+Mejor identificación de clientes importantes.
+Mayor eficiencia en campañas de marketing.
+Reducción de información duplicada.
+Mejor análisis de comportamiento de compra.
+Incremento potencial de ventas.
+Posibles entidades identificadas inicialmente
+Entidad	Descripción
+Cliente	Información del cliente
+Venta	Registro de compras
+Producto	Productos comercializados
+Categoría	Clasificación de productos
+DetalleVenta	Productos incluidos en cada venta
+Segmento	Clasificación del cliente
