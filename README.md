@@ -97,11 +97,12 @@ Beneficios esperados
 - Mejor análisis de comportamiento de compra.
 - Incremento potencial de ventas.
 
-Posibles entidades identificadas inicialmente
-- Entidad                                     Descripción
-- Cliente	                                    Información del cliente
-- Venta	                                      Registro de compras
-- Producto	                                  Productos comercializados
-- Categoría	                                  Clasificación de productos
-- DetalleVenta	                              Productos incluidos en cada venta
-- Segmento	                                  Clasificación del cliente
+Posibles entidades identificadas inicialmente:
+Entidad ( Descripción )                              
+- Cliente	   --->  Información del cliente
+- Venta	    --->  Registro de compras
+- Producto	   --->   Productos comercializados
+- Categoría	    --->  Clasificación de productos
+- DetalleVenta	 ---> Productos incluidos en cada venta
+- Segmento	     ---> Clasificación del cliente
+
