@@ -54,3 +54,32 @@ FROM sys.tables;
 SELECT DB_NAME() AS BaseActual;
 
 SELECT * FROM cliente;
+
+---categoria
+
+CREATE TABLE categoria (
+    id_categoria INT IDENTITY(1,1) PRIMARY KEY,
+    nombre_categoria VARCHAR(100) NOT NULL,
+    descripcion VARCHAR(255)
+);
+GO
+
+SELECT
+    DB_NAME() AS BaseActual,
+    name AS Tabla
+FROM sys.tables;
+
+---producto
+
+CREATE TABLE producto (
+    id_producto INT IDENTITY(1,1) PRIMARY KEY,
+    nombre_producto VARCHAR(100) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL,
+    id_categoria INT NOT NULL,
+
+    CONSTRAINT FK_producto_categoria
+        FOREIGN KEY (id_categoria)
+        REFERENCES categoria(id_categoria)
+);
+GO
