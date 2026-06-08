@@ -83,3 +83,37 @@ CREATE TABLE producto (
         REFERENCES categoria(id_categoria)
 );
 GO
+
+---venta
+
+CREATE TABLE venta (
+   id_venta INT IDENTITY(1,1) PRIMARY KEY,
+   fecha_venta DATE NOT NULL,
+   monto_total DECIMAL(10,2) NOT NULL,
+   id_cliente INT NOT NULL,
+
+   CONSTRAINT FK_venta_cliente
+       FOREIGN KEY (id_cliente)
+       REFERENCES cliente(id_cliente)
+);
+GO
+
+--- detalleventa
+
+CREATE TABLE detalleventa (
+   id_detalle INT IDENTITY(1,1) PRIMARY KEY,
+   cantidad INT NOT NULL,
+   subtotal DECIMAL(10,2) NOT NULL,
+   id_venta INT NOT NULL,
+   id_producto INT NOT NULL,
+
+    CONSTRAINT FK_detalleventa_venta
+        FOREIGN KEY (id_venta)
+        REFERENCES venta(id_venta),
+
+    CONSTRAINT FK_detalleventa_producto
+        FOREIGN KEY (id_producto)
+        REFERENCES producto(id_producto)
+);
+GO
+    
