@@ -13,8 +13,6 @@ id_segmento INT IDENTITY(1,1) PRIMARY KEY,
 nombre_segmento VARCHAR(100) NOT NULL,
 );
 
----Cliente
-
 ---cliente
 
 CREATE TABLE cliente (
