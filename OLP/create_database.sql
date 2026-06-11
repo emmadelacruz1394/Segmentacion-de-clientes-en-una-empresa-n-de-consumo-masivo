@@ -88,3 +88,37 @@ CREATE TABLE detalleventa (
         REFERENCES producto(id_producto)
 );
 GO
+
+---Agregación de check para campos que podrían ser tablas maestras
+
+---TABLA CLIENTE
+
+ALTER TABLE cliente
+ADD CHECK (edad >= 18);
+
+ALTER TABLE cliente
+ADD CHECK (genero IN ('M', 'F'));
+
+---TABALA PRODUCTO
+
+ALTER TABLE producto
+ADD CHECK (precio > 0);
+
+ALTER TABLE producto
+ADD CHECK (stock >= 0);
+
+---TABLA VENTA
+
+ALTER TABLE venta
+ADD CHECK (monto_total >= 0);
+
+---DETALLEVENTA
+
+ALTER TABLE detalleventa
+ADD CHECK (cantidad > 0);
+
+ALTER TABLE detalleventa
+ADD CHECK (subtotal >= 0);
+
+---
+
